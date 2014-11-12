@@ -1,6 +1,6 @@
 # Formula 1 Lap Charts
 
-Interactive lap chart visualization of Formula 1 races.
+Interactive lap chart visualization of Formula 1 races. Demo [here](http://davidor.github.io/formula1-lap-charts/#/).
 
 ![screenshot](https://github.com/davidor/formula1-lap-charts/blob/master/screenshot.jpg?raw=true "screenshot")
 
