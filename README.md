@@ -13,6 +13,8 @@ for the frontend.
 I retrieve the race results from the [Ergast web service](http://ergast.com/mrd/)
 using [this client for NodeJS](https://github.com/davidor/ergast-client-nodejs).
 
+The Ergast web service only contains lap information for races starting from the 2011 season. This is why I can only generate charts starting from the 2011 season. Also, Chris' visualization includes some information like the laps where the safety car was deployed that I cannot show because I cannot get it is not available in the Ergast service.
+
 ## Deploying
 
 ### Backend
