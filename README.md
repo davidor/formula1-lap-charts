@@ -2,6 +2,8 @@
 
 Interactive lap chart visualization of Formula 1 races.
 
+![screenshot](https://github.com/davidor/formula1-lap-charts/blob/master/screenshot.jpg?raw=true "screenshot")
+
 This project is based on the lap chart designed by [Chris Pudney](http://www.vislives.com/2012/03/d3-lap-charts.html).
 Chris used a custom JSON for a single race. I developed a backend service that is able to automatically generate the
 JSON needed to draw the chart for any race starting from the 2011 season.
