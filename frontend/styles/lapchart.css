@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #000000;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #666666;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #ccccff;
+}
+a:visited {
+    color: #cccccc;
+}
+a:active {
+    color: #ffccff;
+}
+a.hover {
+    color: #ffcccc;
+}
+
+.title {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 50px;
+    color: #ffffff;
+}
+
+.attrib {
+    float: right;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+text.lap {
+    fill: #999999;
+}
+
+text.label {
+    fill: #000000;
+}
+
+text.label.marker {
+    font-weight: bold;
+}
+
+polyline.placing {
+    fill: none;
+    stroke-width: 5;
+}
+
+line.tickLine {
+    stroke: #999999;
+}
+
+.lapped {
+    background-color: #333333;
+    stroke: #333333;
+    fill: #333333;
+}
+
+.safety {
+    background-color: #330000;
+    stroke: #330000;
+    fill: #330000;
+}
+
+.raceSelect {
+    float: right;
+    margin-right: 50px;
+}
+
+.seasonSelect {
+    margin-right: 5px;
+}
+
+.roundSelect {
+    margin-right: 5px;
+}
+
+.legend {
+    margin-left: 50px;
+}
+
+.authors {
+    font-size: 10px;
+    float: right;
+    margin-right: 50px;
+}
