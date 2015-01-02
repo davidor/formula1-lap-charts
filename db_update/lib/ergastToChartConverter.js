@@ -1,5 +1,5 @@
-var Race = require('./models/race');
-var Driver = require('./models/driver');
+var Race = require('./domain/race');
+var Driver = require('./domain/driver');
 var _ = require('underscore');
 
 // This module is responsible for converting the data retrieved from the Ergast service to the format

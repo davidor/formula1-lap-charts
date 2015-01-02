@@ -1,13 +1,17 @@
-var express = require('express');
-var app = express();
-var async = require('async');
 var apicache = require('apicache').middleware;
-var ErgastData = require('./lib/ergastData');
-var ErgastToChartConverter = require('./lib/ergastToChartConverter');
-var config = require('./lib/config');
+var express = require('express');
+var mongoose = require('mongoose');
 
-var CACHE_TIME_RACES_LIST = '1 hour';
-var CACHE_TIME_RACE_RESULTS = '1 day';
+var config = require('./config/config');
+var Season = require('./models/season').Season;
+var RaceResult = require('./models/raceResult').RaceResult;
+
+var CACHE_TIME= '1 hour';
+
+var app = express();
+app.listen(config.port, config.ipAddress);
+
+mongoose.connect(config.dbUri, config.dbOptions);
 
 // Add headers
 app.use(function (req, res, next) {
@@ -15,58 +19,17 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/raceresults/:season/:round', apicache(CACHE_TIME_RACE_RESULTS), function (req, res) {
-    async.waterfall([
-        function(callback){
-            getDataFromErgast(req.params.season, req.params.round, callback);
-        },
-        function(raceResults, laps, pitStops, drivers, callback) {
-            convertDataFromErgastToChartFormat(raceResults, laps, pitStops, drivers, callback);
-        }
-    ], function (err, chartData) {
-        if (err) {
-            res.send({});
-        }
-        else {
-            res.send(chartData);
-        }
+app.get('/raceresults/:season/:round', apicache(CACHE_TIME), function (req, res) {
+    RaceResult.findOne()
+        .where('season').equals(req.params.season)
+        .where('round').equals(req.params.round)
+        .exec(function(err, raceResult) {
+            err ? res.send([]) : res.send(raceResult);
+        })
+});
+
+app.get('/raceresults/races', apicache(CACHE_TIME), function (req, res){
+    Season.find(function(err, seasons) {
+        err ? res.send([]) : res.send(seasons);
     });
 });
-
-app.get('/raceresults/races', apicache(CACHE_TIME_RACES_LIST), function (req, res){
-    new ErgastData()
-        .getRacesWithData(function(err, races) {
-            if (err) {
-                res.send([]);
-            }
-            else {
-                res.send(races);
-            }
-        });
-});
-
-app.listen(config.port, config.ipAddress);
-
-function getDataFromErgast(season, round, callback) {
-    new ErgastData()
-        .getData(season, round, function(err, raceResults, laps, pitStops, drivers) {
-            if (err) {
-                callback(err);
-            }
-            else {
-                callback(null, raceResults, laps, pitStops, drivers);
-            }
-        });
-}
-
-function convertDataFromErgastToChartFormat(raceResults, laps, pitStops, drivers, callback) {
-    new ErgastToChartConverter()
-        .getChartDataFromErgastInfo(raceResults, laps, pitStops, drivers, function(err, chartData) {
-            if (err) {
-                callback(err);
-            }
-            else {
-                callback(null, chartData);
-            }
-        });
-}

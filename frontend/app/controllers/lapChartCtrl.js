@@ -94,7 +94,7 @@
         }
 
         function getLastRaceSeason() {
-            return lapChartCtrl.racesWithData[lapChartCtrl.racesWithData.length - 1].year;
+            return lapChartCtrl.racesWithData.sort(function(a, b) {return b.year - a.year})[0].year;
         }
 
         function getLastRaceRound() {

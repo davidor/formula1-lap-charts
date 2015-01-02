@@ -1,3 +1,6 @@
+// This directive is based on the lap chart developed by Chris Pudney.
+// Chris' lap chart can be found at http://www.vislives.com/2012/03/d3-lap-charts.html
+
 (function () {
 
     angular
