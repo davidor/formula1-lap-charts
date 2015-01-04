@@ -28,8 +28,8 @@ To use this tool:
 * Start the service with `npm start`.
 
 First, save the list of races of the available seasons in the DB with PUT http://`ip`:`port`/seasons.
-Next, save the race results with a PUT request to http://://`ip`:`port`/raceresults.
-You can also use PUT http://://`ip`:`port`/raceresults/`{season}` or
+Next, save the race results with a PUT request to http://`ip`:`port`/raceresults.
+You can also use PUT http://`ip`:`port`/raceresults/`{season}` or
 http://`ip`:`port`/raceresults/`{season}`/`{round}` if you only need to update some races.
 
 ### Backend
