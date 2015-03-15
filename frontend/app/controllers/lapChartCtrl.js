@@ -98,7 +98,7 @@
         }
 
         function getLastRaceRound() {
-            return lapChartCtrl.racesWithData[lapChartCtrl.racesWithData.length - 1].rounds.length;
+            return lapChartCtrl.racesWithData.sort(function(a, b) {return b.year - a.year})[0].rounds.length;
         }
     }
     LapChartCtrl.$inject = ['RaceResultsService'];
