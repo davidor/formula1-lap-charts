@@ -1,4 +1,4 @@
 backend/node_modules
 db_update/node_modules
 .idea
-
+*.log
