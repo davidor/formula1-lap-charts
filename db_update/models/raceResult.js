@@ -9,6 +9,7 @@ var raceResultSchema = mongoose.Schema({
         placing: [Number],
         pitstops: [Number],
         mechanical: [Number],
+        accident: [Number],
         disqualified: [Number]
     }],
     lapped: [Number],
