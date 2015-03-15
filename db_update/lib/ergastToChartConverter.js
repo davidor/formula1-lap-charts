@@ -25,7 +25,7 @@ function ErgastToChartConverter() {
                 'Rear wing', 'Engine misfire', 'Vibrations', 'Alternator', 'Collision damage', 'Pneumatics',
                 'Fuel system', 'Technical', 'Oil pressure', 'Drivetrain', 'Turbo', 'ERS', 'Power Unit',
                 'Water pressure', 'Fuel pressure', 'Throttle', 'Steering', 'Electronics', 'Exhaust',
-                'Retired', 'Withdrew'];
+                'Retired', 'Withdrew', 'Power loss'];
 
     // Converts the data obtained from the Ergast service to the format expected by the library used for
     // drawing the lap charts.
