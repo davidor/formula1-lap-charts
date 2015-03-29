@@ -65,9 +65,20 @@ function ErgastToChartConverter() {
 
     // Sets the initial position of each driver in the 'laps' field.
     function setInitialPositions(laps, ergastRaceResults) {
+        // Ergast marks the starting position of the drivers that did not participate in the race with a 0.
+        // This is problematic for drawing the charts, as drivers with position 0 appear above the top margin.
+        // To avoid this situation, I send those drivers to the back of the grid.
+        var driversWithPosition0Found = 0;
+
         ergastRaceResults.driverResults.forEach(function(driverResult) {
             var lapToModify = _.find(laps, function(lap) { return lap.name === driverResult.driver.driverId });
-            lapToModify.placing.push(driverResult.grid);
+            if (driverResult.grid === 0) {
+                lapToModify.placing.push(ergastRaceResults.driverResults.length - driversWithPosition0Found);
+                ++driversWithPosition0Found;
+            }
+            else {
+                lapToModify.placing.push(driverResult.grid);
+            }
         });
     }
 
