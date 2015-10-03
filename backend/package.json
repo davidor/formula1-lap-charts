@@ -11,6 +11,6 @@
   "dependencies": {
     "apicache": "0.0.12",
     "express": "^4.9.8",
-    "mongoose": "^3.8.21"
+    "mongoose": "^4.1.9"
   }
 }
