@@ -2,8 +2,6 @@ var async = require('async');
 var config = require('./../config/config');
 var ErgastData = require('./ergastData');
 var ErgastToChartConverter = require('./ergastToChartConverter');
-var Season = require('./../models/season').Season;
-var RaceResult = require('./../models/raceResult').RaceResult;
 
 var ergastData = new ErgastData();
 var ergastToChartConverter = new ErgastToChartConverter();
