@@ -1,11 +1,8 @@
 var express = require('express');
-var mongoose = require('mongoose');
 var config = require('./config/config');
 var db = require('./lib/db');
 
 var app = express();
-
-mongoose.connect(config.dbUri, config.dbOptions);
 
 // Add headers
 app.use(function (req, res, next) {

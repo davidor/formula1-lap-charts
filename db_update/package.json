@@ -12,7 +12,6 @@
     "async": "~0.9.0",
     "ergast-client": "~0.2.8",
     "express": "^4.9.8",
-    "mongoose": "^3.8.21",
     "underscore": "~1.7.0"
   }
 }

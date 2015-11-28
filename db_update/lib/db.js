@@ -1,4 +1,3 @@
-var mongoose = require('mongoose');
 var async = require('async');
 var config = require('./../config/config');
 var ErgastData = require('./ergastData');
