@@ -1,7 +1,8 @@
 var express = require('express');
 var config = require('./config/config');
-var db = require('./lib/db');
+var Data = require('./lib/data');
 
+var data = new Data();
 var app = express();
 
 // Add headers
@@ -11,25 +12,25 @@ app.use(function (req, res, next) {
 });
 
 app.put('/seasons', function (req, res) {
-    db.updateSeasons(function(err) {
+    data.updateSeasons(function(err) {
         err ? res.status(500).send(err) : res.status(204).send("OK");
     });
 });
 
 app.put('/raceresults', function(req, res) {
-    db.updateAllRaceResults(function(err) {
+    data.updateAllRaceResults(function(err) {
         err ? res.status(500).send(err) : res.status(204).send("OK");
     });
 });
 
 app.put('/raceresults/:season', function (req, res) {
-    db.updateRaceResultsFromSeason(req.params.season, function(err) {
+    data.updateRaceResultsFromSeason(req.params.season, function(err) {
         err ? res.status(500).send(err) : res.status(204).send("OK");
     });
 });
 
 app.put('/raceresults/:season/:round', function (req, res) {
-    db.updateRaceResult(req.params.season, req.params.round, function(err) {
+    data.updateRaceResult(req.params.season, req.params.round, function(err) {
         err ? res.status(500).send(err) : res.status(204).send("OK");
     });
 });
