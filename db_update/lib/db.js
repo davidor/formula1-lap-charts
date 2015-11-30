@@ -1,4 +1,7 @@
+var fs = require('fs');
+var path = require('path');
 var async = require('async');
+var _ = require('underscore');
 var config = require('./../config/config');
 var ErgastData = require('./ergastData');
 var ErgastToChartConverter = require('./ergastToChartConverter');
@@ -17,93 +20,54 @@ function updateSeasons(callback) {
             callback(err);
         }
         else {
-            async.waterfall([
-                function(callback){
-                    deleteSeasons(callback);
-                },
-                function(callback) {
-                    saveSeasons(seasons, callback);
-                }
-            ], function (err) {
+            fs.writeFile(config.seasonsInfoPath, toPrettyJson(seasons), function (err) {
                 err ? callback(err) : callback(null);
             });
         }
     });
 }
 
-function deleteSeasons(callback) {
-    Season.remove(function(err) {
-        err ? callback(err) : callback(null);
-    });
-}
-
-function saveSeasons(seasons, callback) {
-    seasons.forEach(function(seasonInfo) {
-        var season = new Season(seasonInfo);
-        season.save(function(err) {
-            if (err) {
-                callback(err);
-            }
-        });
-    });
-    callback(null);
-}
-
+// seasons.json needs to be updated
 function updateAllRaceResults(callback) {
-    var startYear, endYear;
-    async.waterfall([
-        // find start year
-        function(callback) {
-            Season.findOne().sort('year').exec(function(err, season) {
-                startYear = season.year;
-                callback(err);
-            });
-        },
-        // find end year
-        function(callback) {
-            Season.findOne().sort('-year').exec(function(err, season) {
-                endYear = season.year;
-                callback(err);
-            });
-        },
-        // update the races between the start and the end year
+    var seasonsInfo = JSON.parse(fs.readFileSync(config.seasonsInfoPath, 'utf8'));
+    var sortedSeasonsInfo = _.sortBy(seasonsInfo, function(season) { return season.year; });
+    var startYear = sortedSeasonsInfo[0].year;
+    var endYear = sortedSeasonsInfo[sortedSeasonsInfo.length - 1].year;
+
+    var year = startYear;
+    async.whilst(
+        function () { return year <= endYear },
         function (callback) {
-            var year = startYear;
-            async.whilst(
-                function () { return year <= endYear },
-                function (callback) {
-                    updateRaceResultsFromSeason(year, function(err) {
-                        ++year;
-                        callback(err);
-                    });
-                },
-                function (err) {
-                    callback(err);
-                }
-            );
+            updateRaceResultsFromSeason(year, function(err) {
+                ++year;
+                callback(err);
+            });
+        },
+        function (err) {
+            callback(err);
         }
-    ], function (err) {
-        callback(err);
-    });
+    );
 }
 
+// seasons.json needs to be updated
 function updateRaceResultsFromSeason(season, callback) {
-    Season.findOne({year: season}).exec(function(err, seasonInfo) {
-        var round = 1;
-        async.whilst(
-            function () { return round <= seasonInfo.rounds.length },
-            function (callback) {
-                updateRaceResult(season, round, function() {
-                    ++round;
-                    // We need to avoid making too many consecutive calls to the Ergast service
-                    setTimeout(function() { callback(null); }, 5000);
-                });
-            },
-            function (err) {
-                callback(err);
-            }
-        );
-    });
+    var seasonsInfo = JSON.parse(fs.readFileSync(config.seasonsInfoPath, 'utf8'));
+    var seasonInfo = _.find(seasonsInfo, function(seasonInfo) { return seasonInfo.year == season });
+
+    var round = 1;
+    async.whilst(
+        function () { return round <= seasonInfo.rounds.length },
+        function (callback) {
+            updateRaceResult(season, round, function() {
+                ++round;
+                // We need to avoid making too many consecutive calls to Ergast
+                setTimeout(function() { callback(null); }, 5000);
+            });
+        },
+        function (err) {
+            callback(err);
+        }
+    );
 }
 
 function updateRaceResult(season, round, callback) {
@@ -119,21 +83,9 @@ function updateRaceResult(season, round, callback) {
             callback(err);
         }
         else {
-            deleteRaceResult(season, round, callback);
-            var raceResult = new RaceResult(raceResultForChart);
-            raceResult.season = season;
-            raceResult.round = round;
-            raceResult.save(function(err) {
+            fs.writeFile(raceResultsPath(season, round), toPrettyJson(raceResultForChart), function (err) {
                 err ? callback(err) : callback(null);
             });
-        }
-    });
-}
-
-function deleteRaceResult(season, round, callback) {
-    RaceResult.find({season: season, round: round}).remove(function(err) {
-        if (err) {
-            callback(err);
         }
     });
 }
@@ -148,4 +100,12 @@ function convertDataFromErgastToChartFormat(raceResults, laps, pitStops, drivers
     ergastToChartConverter.getChartDataFromErgastInfo(raceResults, laps, pitStops, drivers, function(err, chartData) {
         err ? callback(err) : callback(null, chartData);
     });
+}
+
+function raceResultsPath(season, round) {
+    return config.raceResultsPath + season + "_" + round + ".json";
+}
+
+function toPrettyJson(json) {
+    return JSON.stringify(json, null, 4);
 }
