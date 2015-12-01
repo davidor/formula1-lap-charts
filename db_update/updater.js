@@ -13,23 +13,27 @@ program
 
 if (program.seasons) {
     data.updateSeasons(function(err) {
-        err ? console.log("Error: " + err) : console.log("OK");
+        print_output(err);
     });
 }
 
 if (program.all) {
     data.updateAllRaceResults(function(err) {
-        err ? console.log(err) : console.log("OK");
+        print_output(err);
     });
 }
 else if (program.year) {
     data.updateRaceResultsFromSeason(program.year, function(err) {
-        err ? console.log(err) : console.log("OK");
+        print_output(err);
     });
 }
 else if (program.race) {
     var race = program.race.split('-');
     data.updateRaceResult(race[0], race[1], function(err) {
-        err ? console.log(err) : console.log("OK");
+        print_output(err);
     });
+}
+
+function print_output(err) {
+    err ? console.log(err) : console.log("OK");
 }
