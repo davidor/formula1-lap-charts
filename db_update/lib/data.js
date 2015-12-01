@@ -2,14 +2,13 @@ var fs = require('fs');
 var path = require('path');
 var async = require('async');
 var _ = require('underscore');
-var config = require('./../config/config');
 var ErgastData = require('./ergastData');
 var ErgastToChartConverter = require('./ergastToChartConverter');
 
 var ergastData = new ErgastData();
 var ergastToChartConverter = new ErgastToChartConverter();
 
-function Data() {
+function Data(config) {
     this.updateSeasons = updateSeasons;
     this.updateAllRaceResults = updateAllRaceResults;
     this.updateRaceResultsFromSeason = updateRaceResultsFromSeason;

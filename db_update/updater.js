@@ -3,7 +3,7 @@ var async = require('async');
 var config = require('./config/config');
 var Data = require('./lib/data');
 
-var data = new Data();
+var data = new Data(config);
 
 program
     .option('-s, --seasons', 'Update seasons info.')
