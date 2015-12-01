@@ -2,7 +2,7 @@
   "name": "f1_lap_chart_backend_db_update",
   "version": "0.1.1",
   "description": "updates the DB retrieving information from the Ergast web service.",
-  "main": "server.js",
+  "main": "updater.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
   "dependencies": {
     "async": "~0.9.0",
     "ergast-client": "~0.2.8",
-    "express": "^4.9.8",
+    "commander": "~2.9.0",
     "underscore": "~1.7.0"
   }
 }

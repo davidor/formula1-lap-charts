@@ -1,8 +1,6 @@
 var path = require('path');
 
 var config = {
-    ipAddress: "127.0.0.1",
-    port: 8090,
     raceResultsPath: path.join(__dirname, '../data/results/'),
     seasonsInfoPath: path.join(__dirname, '../data/seasons.json')
 };
