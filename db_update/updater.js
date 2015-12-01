@@ -1,4 +1,5 @@
 var program = require('commander');
+var async = require('async');
 var config = require('./config/config');
 var Data = require('./lib/data');
 
@@ -18,12 +19,26 @@ if (program.seasons) {
 }
 
 if (program.all) {
-    data.updateAllRaceResults(function(err) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            data.updateAllRaceResults(function(err) { callback(err); });
+        }
+    ], function (err) {
         print_output(err);
     });
 }
 else if (program.year) {
-    data.updateRaceResultsFromSeason(program.year, function(err) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            data.updateRaceResultsFromSeason(program.year, function(err) { callback(err); });
+        }
+    ], function (err) {
         print_output(err);
     });
 }
