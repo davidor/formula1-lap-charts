@@ -1,7 +1,7 @@
 {
   "name": "f1_lap_chart_backend",
   "version": "0.1.1",
-  "description": "retrieves from a MongoDB the information needed to draw the lap chart designed by Chris Pudney.",
+  "description": "retrieves the information needed to draw the lap chart designed by Chris Pudney.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
