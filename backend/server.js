@@ -1,4 +1,5 @@
 var express = require('express');
+var CronJob = require('cron').CronJob;
 var config = require('./config/config');
 var ServerData = require('./serverData');
 
@@ -8,6 +9,12 @@ app.listen(config.port, config.ipAddress);
 var data = new ServerData(config);
 data.updateSeasonsInfo();
 data.updateRaceResults();
+
+new CronJob('* 30 * * * *', function() {
+        data.updateSeasonsInfo();
+        data.updateRaceResults();
+    }, function () { }, true
+);
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
