@@ -9,9 +9,7 @@
   "author": "David Ortiz",
   "license": "CC BY-SA 3.0",
   "dependencies": {
-    "apicache": "0.0.12",
     "express": "^4.9.8",
-    "mongoose": "^4.1.9",
     "async": "~0.9.0",
     "ergast-client": "~0.2.8",
     "commander": "~2.9.0",

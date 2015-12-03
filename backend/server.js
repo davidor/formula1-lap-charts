@@ -1,35 +1,29 @@
-var apicache = require('apicache').middleware;
 var express = require('express');
-var mongoose = require('mongoose');
-
 var config = require('./config/config');
-var Season = require('./models/season').Season;
-var RaceResult = require('./models/raceResult').RaceResult;
-
-var CACHE_TIME= '1 hour';
+var ServerData = require('./serverData');
 
 var app = express();
 app.listen(config.port, config.ipAddress);
 
-mongoose.connect(config.dbUri, config.dbOptions);
+var data = new ServerData(config);
+data.updateSeasonsInfo();
+data.updateRaceResults();
 
-// Add headers
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
 
-app.get('/raceresults/:season/:round', apicache(CACHE_TIME), function (req, res) {
-    RaceResult.findOne()
-        .where('season').equals(req.params.season)
-        .where('round').equals(req.params.round)
-        .exec(function(err, raceResult) {
-            err ? res.send([]) : res.send(raceResult);
-        })
+app.get('/raceresults/:season/:round', function (req, res) {
+    if (!data.raceResults[req.params.season]
+          || !data.raceResults[req.params.season][req.params.round]) {
+        res.send({});
+    }
+    else {
+        res.send(data.raceResults[req.params.season][req.params.round]);
+    }
 });
 
-app.get('/raceresults/races', apicache(CACHE_TIME), function (req, res){
-    Season.find(function(err, seasons) {
-        err ? res.send([]) : res.send(seasons);
-    });
+app.get('/raceresults/races', function (req, res){
+    res.send(data.seasonsInfo);
 });
