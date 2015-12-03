@@ -1,3 +1,4 @@
+var fs = require('fs');
 var program = require('commander');
 var async = require('async');
 var config = require('../config/config');
@@ -11,6 +12,8 @@ program
     .option('-y, --year <year>', 'Update races of one year')
     .option('-r, --race <year-round>', 'Update one race')
     .parse(process.argv);
+
+makeSureDataDirectoriesExist();
 
 if (program.seasons) {
     data.updateSeasons(function(err) {
@@ -51,4 +54,12 @@ else if (program.race) {
 
 function print_output(err) {
     err ? console.log(err) : console.log("OK");
+}
+
+function makeSureDataDirectoriesExist() {
+    [config.dataPath, config.raceResultsPath].forEach(function(path) {
+        if (!fs.existsSync(path)) {
+            fs.mkdirSync(path);
+        }
+    });
 }
