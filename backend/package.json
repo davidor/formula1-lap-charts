@@ -1,6 +1,6 @@
 {
   "name": "f1_lap_chart_backend",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "retrieves the information needed to draw the lap chart designed by Chris Pudney.",
   "main": "server.js",
   "scripts": {
