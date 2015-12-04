@@ -22,43 +22,14 @@ if (program.seasons) {
 }
 
 if (program.all) {
-    async.waterfall([
-        function(callback) {
-            data.updateSeasons(function(err) { callback(err); });
-        },
-        function (callback) {
-            data.updateAllRaceResults(function(err) { callback(err); });
-        }
-    ], function (err) {
-        print_output(err);
-    });
+    updateSeasonsAndAllResults(print_output);
 }
 else if (program.year) {
-    async.waterfall([
-        function(callback) {
-            data.updateSeasons(function(err) { callback(err); });
-        },
-        function (callback) {
-            data.updateRaceResultsFromSeason(program.year, function(err) { callback(err); });
-        }
-    ], function (err) {
-        print_output(err);
-    });
+    updateSeasonsAndResultsOfYear(program.year, print_output);
 }
 else if (program.race) {
-    async.waterfall([
-        function(callback) {
-            data.updateSeasons(function(err) { callback(err); });
-        },
-        function (callback) {
-            var race = program.race.split('-');
-            data.updateRaceResult(race[0], race[1], function(err) {
-                callback(err);
-            });
-        }
-    ], function (err) {
-        print_output(err);
-    });
+    var race = program.race.split('-');
+    updateSeasonsAndRace(race[0], race[1], print_output);
 }
 
 function print_output(err) {
@@ -70,5 +41,44 @@ function makeSureDataDirectoriesExist() {
         if (!fs.existsSync(path)) {
             fs.mkdirSync(path);
         }
+    });
+}
+
+function updateSeasonsAndAllResults(callback) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            data.updateAllRaceResults(function(err) { callback(err); });
+        }
+    ], function (err) {
+        callback(err);
+    });
+}
+
+function updateSeasonsAndResultsOfYear(year, callback) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            data.updateRaceResultsFromSeason(year, function(err) { callback(err); });
+        }
+    ], function (err) {
+        callback(err);
+    });
+}
+
+function updateSeasonsAndRace(year, round, callback) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            data.updateRaceResult(year, round, function(err) { callback(err); });
+        }
+    ], function (err) {
+        callback(err);
     });
 }
