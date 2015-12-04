@@ -1,7 +1,7 @@
 {
   "name": "f1_lap_chart_backend",
-  "version": "0.1.1",
-  "description": "retrieves from a MongoDB the information needed to draw the lap chart designed by Chris Pudney.",
+  "version": "0.2.0",
+  "description": "retrieves the information needed to draw the lap chart designed by Chris Pudney.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,11 @@
   "author": "David Ortiz",
   "license": "CC BY-SA 3.0",
   "dependencies": {
-    "apicache": "0.0.12",
     "express": "^4.9.8",
-    "mongoose": "^4.1.9"
+    "async": "~0.9.0",
+    "ergast-client": "~0.2.8",
+    "commander": "~2.9.0",
+    "underscore": "~1.7.0",
+    "cron": "~1.1.0"
   }
 }
