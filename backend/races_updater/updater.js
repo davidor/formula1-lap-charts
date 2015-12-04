@@ -46,8 +46,17 @@ else if (program.year) {
     });
 }
 else if (program.race) {
-    var race = program.race.split('-');
-    data.updateRaceResult(race[0], race[1], function(err) {
+    async.waterfall([
+        function(callback) {
+            data.updateSeasons(function(err) { callback(err); });
+        },
+        function (callback) {
+            var race = program.race.split('-');
+            data.updateRaceResult(race[0], race[1], function(err) {
+                callback(err);
+            });
+        }
+    ], function (err) {
         print_output(err);
     });
 }
