@@ -2,6 +2,6 @@
 
     angular
         .module('configuration', [])
-        .constant('BASE_URL', 'http://0.0.0.0:8080/raceresults/');
+        .constant('DATA_DIR', 'http://localhost:8080/data');
 
 })();
