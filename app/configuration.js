@@ -2,6 +2,6 @@
 
     angular
         .module('configuration', [])
-        .constant('DATA_DIR', 'http://localhost:8080/data');
+        .constant('DATA_DIR', 'https://davidor.github.io/formula1-lap-charts/data');
 
 })();
