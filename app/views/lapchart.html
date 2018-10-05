@@ -1,0 +1,31 @@
+<span ng-hide="lapChart.loading" class="title">
+        {{lapChart.selectedRace.name + ", " + lapChart.selectedRace.season}}
+</span>
+<div class="raceSelect">
+        <select class="seasonSelect" ng-model="lapChart.selectedRace.season"
+                ng-options="year for year in lapChart.getSeasonsWithData()"></select>
+        <select class="roundSelect" ng-model="lapChart.selectedRace.round"
+                ng-options="round for round in lapChart.getRoundsWithData(lapChart.selectedRace.season)"></select>
+        <button class="raceSelectButton" ng-hide="lapChart.loading" ng-click="lapChart.refreshChart()">Go</button>
+</div>
+<br>
+<div loading-spinner="lapChart.loading"></div>
+<div ng-hide="lapChart.loading">
+<div id="chart"></div>
+        <chart race-results=lapChart.selectedRace.results></chart>
+        <span class="legend">M = mechanical failure | P = pit stop | X = accident | D = disqualified |
+                <!-- I can't get this information from the Ergast API
+                <span class="safety">safety-car deployed</span> | <span class="lapped">lapped</span>
+                -->
+                Mouse click to focus on a lap</span>
+        <span class="authors">
+                App by <a href="https://github.com/davidor">David Ortiz</a> -
+                Code in <a href="https://github.com/davidor/formula1-lap-charts">Github</a> -
+                Chart by <a href="http://www.vislives.com/2012/03/d3-lap-charts.html">Chris Pudney</a>
+                <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">
+                        <img align="top" alt="Creative Commons License"
+                             src="//i.creativecommons.org/l/by-sa/3.0/80x15.png"/>
+                </a>
+        </span>
+
+</div>
