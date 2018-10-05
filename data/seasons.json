@@ -1,0 +1,784 @@
+[
+    {
+        "year": 2011,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Turkish Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "European Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Korean Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Indian Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Abu Dhabi Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Brazilian Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2012,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "European Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Korean Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Indian Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Abu Dhabi Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 20,
+                "name": "Brazilian Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2013,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Korean Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Indian Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Abu Dhabi Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Brazilian Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2014,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2015,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Mexican Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2016,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "European Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Mexican Grand Prix"
+            },
+            {
+                "round": 20,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 21,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2017,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "Azerbaijan Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Malaysian Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Mexican Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 20,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2018,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Azerbaijan Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "French Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "Mexican Grand Prix"
+            },
+            {
+                "round": 20,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 21,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2019,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Australian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Chinese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Azerbaijan Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Canadian Grand Prix"
+            },
+            {
+                "round": 8,
+                "name": "French Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 10,
+                "name": "British Grand Prix"
+            },
+            {
+                "round": 11,
+                "name": "German Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Belgian Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Italian Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Singapore Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Russian Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Japanese Grand Prix"
+            },
+            {
+                "round": 18,
+                "name": "Mexican Grand Prix"
+            },
+            {
+                "round": 19,
+                "name": "United States Grand Prix"
+            },
+            {
+                "round": 20,
+                "name": "Brazilian Grand Prix"
+            },
+            {
+                "round": 21,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2020,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Austrian Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Styrian Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Hungarian Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "British Grand Prix"
+            }
+        ]
+    }
+]
