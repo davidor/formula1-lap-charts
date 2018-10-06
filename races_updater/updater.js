@@ -1,7 +1,7 @@
 var fs = require('fs');
 var program = require('commander');
 var async = require('async');
-var config = require('../config/config');
+var config = require('./config');
 var Data = require('./data');
 
 var data = new Data(config);

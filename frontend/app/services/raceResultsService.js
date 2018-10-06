@@ -5,20 +5,20 @@
         .factory('RaceResultsService', RaceResultsService);
 
     /* @ngInject */
-    function RaceResultsService($http, BASE_URL) {
+    function RaceResultsService($http, data_dir) {
         return {
             getRaceResults: getRaceResults,
             getRacesWithData: getRacesWithData
         };
 
         function getRaceResults(season, round) {
-            return $http({method: 'GET', url: BASE_URL + season + '/' + round});
+            return $http.get(data_dir + '/results/' + season + "_" + round + '.json');
         }
 
         function getRacesWithData() {
-            return $http({method: 'GET', url: BASE_URL + 'races'});
+            return $http.get(data_dir + '/seasons.json');
         }
     }
-    RaceResultsService.$inject = ['$http', 'BASE_URL'];
+    RaceResultsService.$inject = ['$http', 'DATA_DIR'];
 
 })();
