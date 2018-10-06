@@ -9,11 +9,9 @@
   "author": "David Ortiz",
   "license": "CC BY-SA 3.0",
   "dependencies": {
-    "express": "^4.9.8",
     "async": "~0.9.0",
     "ergast-client": "~0.2.8",
     "commander": "~2.9.0",
-    "underscore": "~1.7.0",
-    "cron": "~1.1.0"
+    "underscore": "~1.7.0"
   }
 }
