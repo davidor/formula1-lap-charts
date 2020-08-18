@@ -778,6 +778,14 @@
             {
                 "round": 4,
                 "name": "British Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "70th Anniversary Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Spanish Grand Prix"
             }
         ]
     }
