@@ -786,6 +786,10 @@
             {
                 "round": 6,
                 "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "Belgian Grand Prix"
             }
         ]
     }
