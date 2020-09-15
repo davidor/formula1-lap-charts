@@ -794,6 +794,10 @@
             {
                 "round": 8,
                 "name": "Italian Grand Prix"
+            },
+            {
+                "round": 9,
+                "name": "Tuscan Grand Prix"
             }
         ]
     }
