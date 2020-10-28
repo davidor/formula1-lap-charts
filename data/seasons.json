@@ -806,6 +806,10 @@
             {
                 "round": 11,
                 "name": "Eifel Grand Prix"
+            },
+            {
+                "round": 12,
+                "name": "Portuguese Grand Prix"
             }
         ]
     }
