@@ -810,6 +810,59 @@
             {
                 "round": 12,
                 "name": "Portuguese Grand Prix"
+            },
+            {
+                "round": 13,
+                "name": "Emilia Romagna Grand Prix"
+            },
+            {
+                "round": 14,
+                "name": "Turkish Grand Prix"
+            },
+            {
+                "round": 15,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 16,
+                "name": "Sakhir Grand Prix"
+            },
+            {
+                "round": 17,
+                "name": "Abu Dhabi Grand Prix"
+            }
+        ]
+    },
+    {
+        "year": 2021,
+        "rounds": [
+            {
+                "round": 1,
+                "name": "Bahrain Grand Prix"
+            },
+            {
+                "round": 2,
+                "name": "Emilia Romagna Grand Prix"
+            },
+            {
+                "round": 3,
+                "name": "Portuguese Grand Prix"
+            },
+            {
+                "round": 4,
+                "name": "Spanish Grand Prix"
+            },
+            {
+                "round": 5,
+                "name": "Monaco Grand Prix"
+            },
+            {
+                "round": 6,
+                "name": "Azerbaijan Grand Prix"
+            },
+            {
+                "round": 7,
+                "name": "French Grand Prix"
             }
         ]
     }
